@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    min-height: 100vh;
+    background: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.titel{
+    color: #490000;
+    font-family: Poetsen One;
+    text-transform: capitalize;
+    font-size: x-large;
+    text-align: left;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: none; /* Fjerner den underliggende streg */
+    color: inherit; /* Arver farven fra omgivende elementer */ 
+}
+.section {
+    margin: 100px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: #E197A8;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    text-transform: uppercase;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 10px;
+    padding: 18px;
+    color: #490000;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #E197A8;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top:0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 1469px){
+    header {
+        padding: 20px;
+    }
+    
+    header label {
+        display: block;
+        font-family: Poetsen One;
+        color:#490000
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left:0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+}
+
+
+h1{
+    font-family: Poetsen One;
+    font-size: xxx-large;
+    margin-top: 200px;
+    margin-left: 55px;
+    margin-right: 55px;
+    color: #490000;
+}
+.overskrift{
+    font-family: Poetsen One;
+    font-size: xxx-large;
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-right: 55px;
+    color: #490000;
+}
+
+.tekst {
+    margin: 100px;
+    text-align: left;
+    font-size: medium;
+    line-height: 2;
+    font-family: Helvetica;
+    color: #490000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#picnic {
+height: 300px;
+display:flex;
+margin-left: 70px;
+margin-top: 80px;
+margin-bottom: 70px;
+}
+
+#snak {
+height: 500px;
+display: flex;
+margin: 75px
+}
+
+.ingenpunkter {
+    list-style-type: none;
+}
+
+.content {
+    width: 100%;
+    text-align: justify; /* Gør teksten lige i begge sider */
+    hyphens: auto; /* Tilføjer bindestreger ved behov */
+    margin: 20px; /* Tilføjer afstand rundt om teksten */
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: Poetsen One;
+}
+
+#liste {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+
+
+.kolonne1 {
+    display: flex;
+    flex-direction: column;
+}
+.kolonne2 {
+    display: flex;
+    flex-direction: column;
+}
+#afrunding {
+    padding-top: 0px;
+    padding-right: 0px;
+    border-right: 0px;
+    margin-left: 30px;
+}
+
+#bund {
+    margin: 0px;
+}
+
+footer {
+    background-color: #E197A8; /* Baggrundsfarve for footeren */
+    color: #490000; /* Tekstfarve */
+    padding: 20px; /* Indvendig afstand */
+    line-height: 1.6;
+    text-align: left;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+section.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex; /* Brug flexbox for at arrangere kolonnerne vandret */
+    justify-content: space-around; /* Placer kolonnerne med lige afstand */
+    max-width: 1200px; /* Maksimal bredde for footeren */
+    margin: 0 auto; /* Centrer footer */
+}
+
+.footer-column {
+    flex: 1; /* Gør hver kolonne lige bred */
+    padding: 10px; /* Indvendig afstand i kolonnerne */
+    box-sizing: border-box; /* Sørg for at padding ikke påvirker bredde */
+}
+
+.footer-container img{
+    height: 20px;
+    width: 20px;
+}
+
+.footer-column p {
+    margin: 0; /* Fjern margin fra paragraf */
+}
+.newsletter-form {
+    display: flex;
+    flex-direction: column; /* Opstiller input og knap i en kolonne */
+    align-items: flex-start; /* Sørger for at tekstfelt og knap justeres venstre */
+    max-width: 400px;
+}
+
+.newsletter-form label {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    width: 16rem; /* Gør inputfeltet max 200px bredt */
+    margin-bottom: 10px; /* Adskiller inputfeltet fra knappen */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #490000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 16rem;
+}
+
+.newsletter-form button:hover {
+    background-color: #49000085;
+}
